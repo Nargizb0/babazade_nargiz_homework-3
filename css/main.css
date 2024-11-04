@@ -1,0 +1,185 @@
+.hidden {
+    display: none;
+}
+
+/* when you have minimal content, but want full height */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #12120a;
+    padding: 10px 0;
+}
+
+#main-logo {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+
+#character-nav {
+    background-color: #21221d;
+    background-image: url(../images/characters_art_mas_mob_01.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+#character-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#character-nav ul li {
+    height: 220px;
+    margin: 10px 8px; /*top, botttom, left right*/
+    background-color: black;
+    box-shadow: 0 155px 0 0 #12120a inset;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+#character-nav ul li:hover {
+    box-shadow: 0 220px 0 0 #12120a inset;
+}
+
+#character-nav ul li h2 {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+#character-nav ul li a {
+    text-decoration: none;
+}
+
+.sprite {
+    width: 150px;
+    height: 150px;
+    background-image: url(../images/dune.jpg);
+}
+
+#chani {
+    background-position: -150px 0;
+}
+
+#dukeleto {
+    background-position: -300px 0;
+}
+
+#stilgar {
+    background-position: -450px 0;
+}
+
+#jesica {
+    background-position: -600px 0;
+}
+
+#idaho {
+    background-position: -750px 0;
+}
+
+#Paul:hover, #chani:hover, #dukeleto:hover, #stilgar:hover, #jesica:hover, #idaho:hover{
+    background-position-y: -150px;
+}
+
+#instructions {
+    padding: 20px;
+    text-align: center;
+}
+
+#instructions h3 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: rgb(40, 37, 37);
+    height: 80px;
+    position: sticky;
+    top: 100%;
+}
+
+
+/* all light boxes get these rules, that's why cap appears for all of them */
+
+/* Lightbox is set to display none, hidden for now */
+.lightbox {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.85);
+    background-image: url(../images/paul\ atreides.png);
+    background-repeat: no-repeat;
+    background-size: 55vh;
+    background-position: 40px bottom;
+    display: none;
+    text-align: right;
+}
+
+/* we overwrite cap using specific ids */
+#lightbox2 {
+    background-image: url(../images/Chani_29_-_Outfit_-_Fortnite.webp);
+}
+
+#lightbox3 {
+    background-image: url(../images/dukeleto.png);
+}
+
+#lightbox4 {
+    background-image: url(../images/stilgar.png);
+}
+
+#lightbox5 {
+    background-image: url(../images/ladyjessica.png);
+}
+
+#lightbox6 {
+    background-image: url(../images/duncan.png);
+}
+/* target allows us to show content based on the url
+e.g. #lightbox, #lightbox2, #lightbox3  */
+
+/* selecor would be .lightbox#lightbox2, .lightbox#lightbox3  */
+.lightbox:target {
+    display: block;
+}
+
+.lightbox-close {
+    color: white;
+    font-size: 3em;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.lightbox-close:hover { 
+    opacity: 0.5; color: red; 
+}
+
+.lightbox article {
+    width: 600px;
+    margin-left: 40%;
+    padding-top: 50px;
+}
+
+.lightbox p, .lightbox h3 {
+    text-align: left
+}
